@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover wildlife, explore species and learn how to protect biodiversity.">
+  <title>WildlifeWise | Discover. Learn. Protect.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body data-page="home">
+<header class="site-header">
+  <a class="brand" href="{{ url_for('home') }}"><span class="brand-mark">W</span><span>Wildlife<span class="brand-light">Wise</span></span></a>
+  <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a class="active" href="{{ url_for('home') }}">Home</a><a href="{{ url_for('animals') }}">Explore Animals</a>
+    <a href="{{ url_for('chatbot') }}">AI Assistant</a><a href="{{ url_for('quiz') }}">Wildlife Quiz</a>
+    <a href="{{ url_for('conservation') }}">Conservation</a><a href="{{ url_for('about') }}">About Us</a>
+  </nav>
+  <a class="header-cta" href="{{ url_for('animals') }}">Start exploring <span>↗</span></a>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-shade"></div>
+    <div class="hero-content container">
+      <p class="eyebrow light">A little curiosity can protect a whole planet</p>
+      <h1>Discover the wild.<br><em>Understand our world.</em></h1>
+      <p class="hero-copy">Meet remarkable species, uncover the stories behind their habitats, and learn how every living thing connects to the bigger picture.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="{{ url_for('animals') }}">Explore animals <span>→</span></a><a class="btn btn-glass" href="{{ url_for('chatbot') }}">Ask the AI assistant <span>✳</span></a></div>
+      <div class="hero-note"><span class="pulse-dot"></span> Curious minds. Wilder futures.</div>
+    </div>
+    <div class="hero-index"><span>01</span><span class="index-line"></span><span>DISCOVER</span></div>
+  </section>
+
+  <section class="intro-section container section-pad">
+    <div class="intro-copy"><p class="eyebrow">WELCOME TO WILDLIFEWISE</p><h2>Nature has a story.<br><em>Let's learn to read it.</em></h2></div>
+    <div class="intro-text"><p>WildlifeWise is an interactive learning space that brings wildlife knowledge closer to everyone. Explore animal profiles, ask questions in everyday language, and discover why biodiversity matters.</p><a class="text-link" href="{{ url_for('about') }}">Get to know the project <span>↗</span></a></div>
+  </section>
+
+  <section class="featured-section section-pad">
+    <div class="container">
+      <div class="section-heading"><div><p class="eyebrow">MEET THE WILD</p><h2>Featured <em>friends</em></h2></div><a class="text-link" href="{{ url_for('animals') }}">View all animals <span>→</span></a></div>
+      <div class="animal-grid featured-grid">
+        <article class="animal-card"><div class="animal-photo photo-tiger"><span class="status status-endangered">Endangered</span></div><div class="animal-card-body"><p class="card-kicker">MAMMAL · ASIA</p><h3>Bengal Tiger</h3><p class="scientific">Panthera tigris tigris</p><p class="card-description">A powerful big cat whose striped coat makes every individual pattern unique.</p><a href="{{ url_for('animals') }}" class="card-link">Discover species <span>↗</span></a></div></article>
+        <article class="animal-card"><div class="animal-photo photo-elephant"><span class="status status-endangered">Endangered</span></div><div class="animal-card-body"><p class="card-kicker">MAMMAL · AFRICA & ASIA</p><h3>Elephant</h3><p class="scientific">Elephantidae</p><p class="card-description">Gentle giants with remarkable memories and complex family bonds.</p><a href="{{ url_for('animals') }}" class="card-link">Discover species <span>↗</span></a></div></article>
+        <article class="animal-card"><div class="animal-photo photo-panda"><span class="status status-vulnerable">Vulnerable</span></div><div class="animal-card-body"><p class="card-kicker">MAMMAL · CHINA</p><h3>Giant Panda</h3><p class="scientific">Ailuropoda melanoleuca</p><p class="card-description">A bamboo-loving bear and an international symbol of conservation.</p><a href="{{ url_for('animals') }}" class="card-link">Discover species <span>↗</span></a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="fact-band">
+    <div class="container fact-inner"><div><p class="eyebrow light">A DAILY DOSE OF WONDER</p><h2>Wild fact <span>✳</span></h2></div><p class="fact-text">An elephant can communicate using very low-frequency sounds that travel through the ground over long distances.</p><span class="fact-number">DID YOU<br>KNOW?</span></div>
+  </section>
+
+  <section class="path-section container section-pad">
+    <div class="section-heading"><div><p class="eyebrow">YOUR NEXT ADVENTURE</p><h2>Learn more. <em>Care more.</em></h2></div></div>
+    <div class="path-grid">
+      <a class="path-card path-chat" href="{{ url_for('chatbot') }}"><span class="path-icon">✳</span><span class="path-number">01 / ASK</span><h3>Curiosity, meet answers.</h3><p>Ask wildlife questions and explore ideas with your AI learning assistant.</p><span class="path-arrow">↗</span></a>
+      <a class="path-card path-quiz" href="{{ url_for('quiz') }}"><span class="path-icon">◎</span><span class="path-number">02 / PLAY</span><h3>Put your wild knowledge to the test.</h3><p>Take a quick quiz, learn something new, and build your wildlife know-how.</p><span class="path-arrow">↗</span></a>
+      <a class="path-card path-care" href="{{ url_for('conservation') }}"><span class="path-icon">♧</span><span class="path-number">03 / PROTECT</span><h3>Small actions matter.</h3><p>Understand conservation challenges and discover ways to make a difference.</p><span class="path-arrow">↗</span></a>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><a class="brand brand-footer" href="{{ url_for('home') }}"><span class="brand-mark">W</span><span>Wildlife<span class="brand-light">Wise</span></span></a><p>Learn about wildlife. Leave a lighter footprint.</p><span>© 2026 WildlifeWise · Student project</span></div></footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body></html>
